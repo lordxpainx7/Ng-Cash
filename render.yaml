@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: ngcash
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_KEY
+        generateValue: true
+      - key: ADMIN_MASTER_PASSWORD
+        value: LordNG2026Secure!
